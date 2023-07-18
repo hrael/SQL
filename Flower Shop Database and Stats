@@ -1,0 +1,36 @@
+--Create a flower shop database
+
+
+CREATE TABLE flowers (id INTEGER PRIMARY KEY, name TEXT, season TEXT, longevity TEXT, color TEXT, price INTEGER);
+
+INSERT INTO flowers VALUES(1, "Daffodil", "Spring", "Perennial", "Yellow", 4.50);
+INSERT INTO flowers VALUES(2, "Tulip", "Spring", "Perennial", "Red", 5.00);
+INSERT INTO flowers VALUES(3, "Crocus", "Spring", "Perennial", "Purple", 4.00);
+INSERT INTO flowers VALUES(4, "Peony", "Spring", "Perennial", "Pink", 5.00);
+INSERT INTO flowers VALUES(5, "Petunia", "Summer", "Perennial", "White", 3.50);
+INSERT INTO flowers VALUES(6, "Dahlia", "Summer", "Perennial", "Pink", 4.00);
+INSERT INTO flowers VALUES(7, "Zinnia", "Summer", "Annual", "Multi", 3.00);
+INSERT INTO flowers VALUES(8, "Aster", "Autumn", "Perennial", "Purple", 3.50);
+INSERT INTO flowers VALUES(9, "Chrysanthemum", "Autumn", "Perennial", "Orange", 4.00);
+INSERT INTO flowers VALUES(10, "Rose", "Autumn", "Perennial", "Red", 6.00);
+INSERT INTO flowers VALUES(11, "Hydrangea", "Autumn", "Perennial", "Blue, White", 4.50);
+INSERT INTO flowers VALUES(12, "Geranium", "Summer", "Annual", "Red, White", 2.50);
+INSERT INTO flowers VALUES(13, "Cosmos", "Spring", "Annual", "Multi", 2.50);
+INSERT INTO flowers VALUES(14, "Snowdrops", "Winter", "Perennial", "White", 3.00);
+INSERT INTO flowers VALUES(15, "Cyclamen", "Winter", "Perennial", "White", 4.00);
+
+
+
+--display the database ordered by price.
+SELECT * FROM flowers ORDER BY price asc;
+
+--What is the average price of summer flowers?
+SELECT AVG(price) FROM flowers WHERE season="Summer";
+
+--What kind of Winter flowers are available?
+SELECT * from flowers WHERE season="Winter";
+
+
+
+
+
